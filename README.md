@@ -22,13 +22,13 @@ approximate the *score* \(\nabla_x \log p_t(x)\) of the perturbed
 distribution, one can simulate a reverse–time SDE to generate novel
 data. Three SDE families are implemented:
 
-* **VE–SDE (variance exploding)**: \(f=0\), \(g(t)=\sigma(t)\sqrt{2\log\tfrac{\sigma_\text{max}}{\sigma_\text{min}}}\) with
-  \(\sigma(t)=\sigma_\text{min}(\sigma_\text{max}/\sigma_\text{min})^t\). Noise variance grows exponentially.
-* **VP–SDE (variance preserving)**: \(f=-\tfrac12 \beta(t)x\), \(g(t)=\sqrt{\beta(t)}\) with
-  \(\beta(t)\) a linear or cosine schedule. The variance of \(x(t)\)
+* **VE–SDE (variance exploding)**: $f=0$, $g(t)=\sigma(t)\sqrt{2\log\tfrac{\sigma_\text{max}}{\sigma_\text{min}}}$ with
+  $\sigma(t)=\sigma_\text{min}(\sigma_\text{max}/\sigma_\text{min})^t\$. Noise variance grows exponentially.
+* **VP–SDE (variance preserving)**: $f=-\tfrac12 \beta(t)x$, $g(t)=\sqrt{\beta(t)}$ with
+  $\beta(t)$ a linear or cosine schedule. The variance of $x(t)$
   remains roughly constant.
 * **subVP–SDE**: identical drift to VP but diffusion
-  \(g(t)=\sqrt{\beta(t)\tfrac{1-\alpha_{\bar t}(t)}{\alpha_{\bar t}(t)}}\) which better matches the discrete
+  $g(t)=\sqrt{\beta(t)\tfrac{1-\alpha_{\bar t}(t)}{\alpha_{\bar t}(t)}}$ which better matches the discrete
   diffusion process used in DDPMs.
 
 The reverse–time dynamics are simulated using one of three
