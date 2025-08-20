@@ -49,7 +49,7 @@ The project uses a standard Python package layout. Clone the
 repository and install the dependencies in a virtual environment:
 
 ```bash
-git clone <this repository> sbgm
+git clone https://github.com/astropi-b/sbgm.git
 cd sbgm
 pip install -e .
 ```
