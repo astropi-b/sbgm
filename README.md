@@ -14,7 +14,7 @@ In score–based generative models we define a continuous–time forward
 process that gradually perturbs data with increasing noise according
 to an SDE
 
-\[\mathrm{d}x = f(x,t)\,\mathrm{d}t + g(t)\,\mathrm{d}W_t,\]
+$$\mathrm{d}x = f(x,t)\,\mathrm{d}t + g(t)\,\mathrm{d}W_t,$$
 
 where \(f\) is the drift, \(g\) the diffusion coefficient and \(W_t\)
 a Wiener process. By training a neural network \(s_\theta(x,t)\) to
