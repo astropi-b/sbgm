@@ -1,0 +1,28 @@
+dataset:
+  type: synthetic
+  num_samples: 1000
+  length: 100
+model:
+  in_channels: 1
+  base_channels: 64
+  channel_mults: [1, 2, 4]
+  num_res_blocks: 2
+  attn_lengths: []
+  time_embed_dim: 128
+sde:
+  type: ve
+  sigma_min: 0.01
+  sigma_max: 5.0
+  eps: 1e-5
+training:
+  epochs: 1
+  batch_size: 64
+  lr: 0.0002
+  ema_decay: 0.999
+  grad_clip: 1.0
+  amp: false
+  tensorboard: false
+sampler:
+  method: em
+  steps: 100
+  num_samples: 64

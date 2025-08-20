@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sbgm"
+version = "0.1.0"
+description = "Score based diffusion models with SDE formulation for 1D and 2D data."
+authors = [
+    { name = "SBGM Contributors", email = "noreply@example.com" },
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "torch",
+    "torchvision",
+    "numpy",
+    "matplotlib",
+    "tqdm",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+extras = [
+    "tensorboard",
+    "torchdiffeq",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sbgm*"]
