@@ -2,7 +2,7 @@
 
 This repository implements **score–based diffusion models** using the
 **stochastic differential equation (SDE) formulation** described in
-Song et al. ([2021]【615325094571085†screenshot】). It supports both 2D image data (e.g. MNIST) and 1D time
+Song et al. ([2021]). It supports both 2D image data (e.g. MNIST) and 1D time
 series with a flexible, well–tested codebase that runs on **CPU**,
 **CUDA** and Apple Silicon **MPS** devices. The goal is to provide a
 complete end–to–end pipeline covering SDE families, score networks,
@@ -41,7 +41,7 @@ algorithms:
 | **Probability flow ODE** | Solves a deterministic ODE equivalent to the reverse SDE; uses a fixed–step RK4 solver. |
 
 For a deeper mathematical treatment see Song et al. (2021) and
-Nichol & Dhariwal (2021)【615325094571085†screenshot】.
+Nichol & Dhariwal (2021).
 
 ## Installation
 
